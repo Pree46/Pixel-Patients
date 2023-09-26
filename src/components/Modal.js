@@ -8,20 +8,31 @@ const Modal = ({ setModalOpen, contract }) => {
   };
   useEffect(() => {
     const accessList = async () => {
-      const addressList = await contract.shareAccess();
-      let select = document.querySelector("#selectNumber");
-      const options = addressList;
-
-      for (let i = 0; i < options.length; i++) {
-        let opt = options[i];
-        let e1 = document.createElement("option");
-        e1.textContent = opt;
-        e1.value = opt;
-        select.appendChild(e1);
+      try {
+        const addressList = await contract.shareAccess();
+  
+        if (Array.isArray(addressList)) {
+          let select = document.querySelector("#selectNumber");
+          select.innerHTML = ""; // Clear existing options
+  
+          for (let i = 0; i < addressList.length; i++) {
+            let opt = addressList[i];
+            let e1 = document.createElement("option");
+            e1.textContent = opt;
+            e1.value = opt;
+            select.appendChild(e1);
+          }
+        } else {
+          console.error("shareAccess did not return an array:", addressList);
+        }
+      } catch (error) {
+        console.error("Error calling shareAccess:", error);
       }
     };
+  
     contract && accessList();
   }, [contract]);
+  
 return (
     <>
       <div className="modalBackground">
