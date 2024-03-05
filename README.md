@@ -1,19 +1,19 @@
 
-# Pixel Patients
+# 🏥 Pixel Patients
 
 The goal of this blockchain-based healthcare application is to provide patients with a secure and interoperable platform for recording, storing, and sharing their Personal Health Records (PHRs) with healthcare providers and intermediaries.
 
 
 
 
-## Technologies Used
+## ▶️ Technologies used
 - Solidity
 - Ether.js and React.js
 - Filecoin
 - React.js
 
 
-## Getting Started
+## 🤔 Installation
 
 1. **Clone the repository:**
    ```bash
@@ -32,7 +32,7 @@ npm start
 
 
 
-## Usage
+## ✅ Usage
 
 1. **Open the Application**
 
