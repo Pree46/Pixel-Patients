@@ -58,3 +58,10 @@ npm start
    - Explore the decentralized healthcare record-sharing features.
    - Interact with the components to share, upload, and display healthcare records securely.
 
+## 📞 Contact Us
+If you have any questions or feedback about Pixel-Patients, please don't hesitate to contact us - 
+<br>
+
+<a href="https://github.com/Pree46"> R Preethi </a> <br>
+<a href="https://github.com/haaniyairam"> Haaniya Iram </a> <br>
+
